@@ -27,17 +27,17 @@ public class ReviewExtraction {
 
             try {
                 Gson gson = new Gson();
-                String[] jsonUnits = value.toString().split("\\n");
+                String[] jsonUnits = value.toString().split("\\n"); // process line by line
                 for (int i = 0; i < jsonUnits.length; i++) {
                     Review review = gson.fromJson(jsonUnits[i], Review.class);
                     if (review != null && review.text != null && !review.text.equals("")) {
-                    	review.text = review.text.replace("\n", "\\n");
+                    	review.text = review.text.replace("\n", "\\n"); // for compact display
                     	// ReviewWritable writableReview = new ReviewWritable(review);
-                		context.write(new Text(review.text), new Text("stars: " + review.stars + 
+                		context.write(new Text(review.text), new Text("stars: " + review.stars +
                 				" positive: " + (review.stars > 3 ? "1" : "0")));
                     }
                 }
-                
+
 //                StringTokenizer jsonItr = new StringTokenizer(value.toString(), "\\n");
 //                while (jsonItr.hasMoreTokens()) {
 //                    String curr = jsonItr.nextToken();
@@ -45,7 +45,7 @@ public class ReviewExtraction {
 //                	Review review = gson.fromJson(curr, Review.class);
 //                    if (review != null && review.text != null) {
 //                    	review.text = review.text.replace("\n", "\\n");
-//                    	context.write(new Text(review.text), new Text("stars: " + review.stars + 
+//                    	context.write(new Text(review.text), new Text("stars: " + review.stars +
 //                				" positive: " + (review.stars > 3 ? "1" : "0")));
 //                    }
 //                }
