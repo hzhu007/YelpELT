@@ -61,7 +61,7 @@ public class ReviewExtraction {
 
     public static void runJob(String inputPath, String outputPath) throws Exception {
         Configuration conf = new Configuration();
-        Job job = Job.getInstance(conf, "YelpReviewELT");
+        Job job = Job.getInstance(conf, "YelpReviewETL");
         job.setJarByClass(ReviewExtraction.class);
         // specify all your types for both mapper and reducer
         // otherwise they will use the same setting

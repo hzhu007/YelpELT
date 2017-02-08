@@ -1,7 +1,7 @@
 # YelpReviewELT
 
 ## Intro
-Data source: [Kaggle Yelp Recruiting Competition](https://www.kaggle.com/c/yelp-recruiting])
+Data source: [Kaggle Yelp Recruiting Competition](https://www.kaggle.com/c/yelp-recruiting)
 
 Extract reviews from *yelp_training_set_review.json* on a cluster with Hadoop MapReduce and tag each review with its associated stars and a label describing it is a positive review (star > 3) or not.
 
@@ -44,3 +44,13 @@ I have no idea why some people give bad reviews about this place. It goes to sho
 My wife took me here on my birthday for breakfast and it was excellent.  The weather was perfect which made sitting outside overlooking their grounds an absolute pleasure.  Our waitress was excellent and our food arrived quickly on the semi-busy Saturday morning.  It looked like the place fills up pretty quickly so the earlier you get here the better.\n\nDo yourself a favor and get their Bloody Mary.  It was phenomenal and simply the best I've ever had.  I'm pretty sure they only use ingredients from their garden and blend them fresh when you order it.  It was amazing.\n\nWhile EVERYTHING on the menu looks excellent, I had the white truffle scrambled eggs vegetable skillet and it was tasty and delicious.  It came with 2 pieces of their griddled bread with was amazing and it absolutely made the meal complete.  It was the best "toast" I've ever had.\n\nAnyway, I can't wait to go back!	stars: 5 positive: 1
 love the gyro plate. Rice is so good and I also dig their candy selection :)	stars: 4 positive: 1
 ```
+## Asides
+1. Virtual box and Ubuntu installation http://www.psychocats.net/ubuntu/virtualbox
+2. Hadoop installation: https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SingleCluster.html  
+`$ jps # check if nodes are running` http://www.bogotobogo.com/Linux/hadoop2_running_on_ubuntu_single_node_cluster.php  
+Permission denied problem when running _start-dfs.sh_  http://serverfault.com/questions/544917/pdsh-gives-error-rcmd-socket-permission-denied/775914
+3. Share folder with VirtualBox http://askubuntu.com/a/679916 (only need to add user group then reboot)
+4. Import library into eclipse http://stackoverflow.com/a/4962584
+5. Work with Hadoop in Eclipse  
+http://stackoverflow.com/questions/4058155/how-can-i-compile-a-java-program-in-eclipse-without-running-it  
+http://stackoverflow.com/questions/15188042/where-are-hadoop-jar-files-in-hadoop-2/15202099#15202099
