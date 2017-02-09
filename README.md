@@ -50,7 +50,9 @@ love the gyro plate. Rice is so good and I also dig their candy selection :)	sta
 `$ jps # check if nodes are running` http://www.bogotobogo.com/Linux/hadoop2_running_on_ubuntu_single_node_cluster.php  
 Permission denied problem when running _start-dfs.sh_  http://serverfault.com/questions/544917/pdsh-gives-error-rcmd-socket-permission-denied/775914
 3. Share folder with VirtualBox http://askubuntu.com/a/679916 (only need to add user group then reboot)
-4. Import library into eclipse http://stackoverflow.com/a/4962584
+4. Import library into eclipse http://stackoverflow.com/a/4962584  
+A better practice is using Maven project and add corresponding dependencies in pom file. This allows downloading dependent libraries automatically.
 5. Work with Hadoop in Eclipse  
 http://stackoverflow.com/questions/4058155/how-can-i-compile-a-java-program-in-eclipse-without-running-it  
 http://stackoverflow.com/questions/15188042/where-are-hadoop-jar-files-in-hadoop-2/15202099#15202099
+6. A mysterious problem: the jar file packed by Eclipse in MacOS cannot be resolved by hadoop jar command. Instead I need to work in a Linux system. Also, the jar file packed in a Linux system cannot be unzipped in my MacOS. Hence I guess it's probably the problem with the difference of compression algorithms used between MacOS and Linux.
